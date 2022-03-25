@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.yz.liveshow:billboard-sdk:1.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://D:/java/Maven/repository/com/yz/liveshow/billboard-sdk/1.0.0-SNAPSHOT/billboard-sdk-1.0.0-20220307.035100-2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/java/Maven/repository/com/yz/liveshow/billboard-sdk/1.0.0-SNAPSHOT/billboard-sdk-1.0.0-20220307.035100-2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/java/Maven/repository/com/yz/liveshow/billboard-sdk/1.0.0-SNAPSHOT/billboard-sdk-1.0.0-20220307.035100-2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,42 @@
+package com.cheng.controller;
+
+import com.cheng.domain.User;
+import io.swagger.annotations.Api;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * 测试服务接口
+ * @author chengwuchao
+ * @date 2022/3/18
+ */
+@RestController
+@RequestMapping("/test/api")
+@Api(value = "测试服务", tags = "测试服务")
+public class TestController {
+
+    @Autowired
+    private RedisTemplate redisTemplate;
+
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
+
+    @GetMapping("/redis-serialize")
+    public void testRedisSerialize(){
+        User user = new User();
+        user.setId(1L);
+        user.setName("张三");
+        //redisTemplate.opsForHash().put(1, "user", user);
+        //
+        //Object user1 = redisTemplate.opsForHash().get(1, "user");
+        //System.out.println(user1);
+
+        //stringRedisTemplate.opsForValue().set("test-key", "测试");
+        String test = stringRedisTemplate.opsForValue().get("test-key");
+        System.out.println(test);
+    }
+}

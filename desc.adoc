@@ -1,0 +1,5 @@
+== 项目描述
+
+. redis序列化问题
+. null值缓存问题
+. List left、rightPush 顺序区别
