@@ -4,6 +4,7 @@
 . redis序列化问题
 . null值缓存问题
 . List left、rightPush 顺序区别
+. List 做缓存的数据重复问题，加锁 (遇到的问题，如何解决)
 
 == 多线程
 . 异步任务
