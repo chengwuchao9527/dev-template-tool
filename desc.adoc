@@ -5,11 +5,17 @@
 . null值缓存问题
 . List left、rightPush 顺序区别
 . List 做缓存的数据重复问题，加锁 (遇到的问题，如何解决)
+. Lua 脚本
 
 == 多线程
+. 线程池的使用
 . 异步任务
 
 == Spring
-
 . IOC
 . AOP
+
+== 网络通讯
+. http请求的封装和解析
+
+== nginx的配置
