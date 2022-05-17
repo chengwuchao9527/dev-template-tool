@@ -23,3 +23,14 @@
 
 == 定时任务
 . 粗略定时器
+
+== Swagger配置
+. 添加pom依赖
+.. <springfox-swagger2> <springfox-swagger-ui>
+
+. yml配置
+.. dev环境 enable:true  prod环境 enable:false
+
+. 添加配置文件
+
+. 访问：v2/api-docs 接口同步接口文档
