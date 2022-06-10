@@ -1,6 +1,6 @@
 spring:
   redis:
-    host: 81.69.34.46
+    host: 121.196.15.148
     port: 6379
     password: chengwuchao1314
     jedis:

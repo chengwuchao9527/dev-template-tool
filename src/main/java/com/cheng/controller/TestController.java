@@ -39,4 +39,9 @@ public class TestController {
         String test = stringRedisTemplate.opsForValue().get("test-key");
         System.out.println(test);
     }
+
+    @GetMapping("/test-exception")
+    public void testGlobalException(){
+        throw new RuntimeException("自定义异常");
+    }
 }
