@@ -10,9 +10,17 @@ import java.io.StringWriter;
  */
 public class ThrowableUtil {
 
-    //public
-    //StringWriter sw = new StringWriter(Throwable throwable);
-    //try(PrintWriter pw = new PrintWriter(sw)){
-    //    throwab
-    //}
+    /**
+     * 获取堆栈信息
+     * @param throwable
+     * @return
+     */
+    public static String getStackTrace(Throwable throwable){
+        StringWriter sw = new StringWriter();
+        try(PrintWriter pw = new PrintWriter(sw)){
+            throwable.printStackTrace(pw);
+            return sw.toString();
+        }
+    }
+
 }

@@ -1,6 +1,8 @@
 package com.cheng.controller;
 
 import com.cheng.domain.User;
+import com.cheng.exception.BadRequestException;
+import com.cheng.exception.EntityExistException;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -42,6 +44,6 @@ public class TestController {
 
     @GetMapping("/test-exception")
     public void testGlobalException(){
-        throw new RuntimeException("自定义异常");
+        throw new EntityExistException(User.class, "id", "23");
     }
 }
