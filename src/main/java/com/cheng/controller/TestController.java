@@ -43,7 +43,7 @@ public class TestController {
     }
 
     @GetMapping("/test-exception")
-    public void testGlobalException(){
+    public void testGlobalException(Integer test){
         throw new EntityExistException(User.class, "id", "23");
     }
 }
