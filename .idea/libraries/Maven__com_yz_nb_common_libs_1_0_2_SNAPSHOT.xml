@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: com.yz.nb:common-libs:1.0.2-SNAPSHOT">
     <CLASSES>
-      <root url="jar://D:/java/Maven/repository/com/yz/nb/common-libs/1.0.2-SNAPSHOT/common-libs-1.0.2-20220317.030119-10.jar!/" />
+      <root url="jar://$USER_HOME$/devTools/mavenRepository/com/yz/nb/common-libs/1.0.2-SNAPSHOT/common-libs-1.0.2-20220417.071926-12.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://D:/java/Maven/repository/com/yz/nb/common-libs/1.0.2-SNAPSHOT/common-libs-1.0.2-20220317.030119-10-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/devTools/mavenRepository/com/yz/nb/common-libs/1.0.2-SNAPSHOT/common-libs-1.0.2-20220417.071926-12-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://D:/java/Maven/repository/com/yz/nb/common-libs/1.0.2-SNAPSHOT/common-libs-1.0.2-20220317.030119-10-sources.jar!/" />
+      <root url="jar://$USER_HOME$/devTools/mavenRepository/com/yz/nb/common-libs/1.0.2-SNAPSHOT/common-libs-1.0.2-20220417.071926-12-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
