@@ -42,16 +42,14 @@ public class Question1 {
 
     @Test
     public void test() {
-        int[] prices = {7, 1, 5, 3, 6, 4};
-        // 暴力解法
-        int maximumProfit1 = getMaximumProfit1(prices);
-        System.out.println(maximumProfit1);
-        // 一次遍历
-        int maximumProfit2 = getMaximumProfit2(prices);
-        System.out.println(maximumProfit2);
-        //动态规划
-        int maximumProfit3 = getMaximumProfit3(prices);
-        System.out.println(maximumProfit3);
+        int n = 10;
+        int[] res = new int[n];
+        for (int i = 9; i > 0; i--) {
+            res[i]++;
+        }
+        for (int re : res) {
+            System.out.println(re);
+        }
 
 
     }
