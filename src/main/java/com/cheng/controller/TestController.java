@@ -32,13 +32,13 @@ public class TestController {
         User user = new User();
         user.setId(1L);
         user.setName("张三");
-        //redisTemplate.opsForHash().put(1, "user", user);
-        //
-        //Object user1 = redisTemplate.opsForHash().get(1, "user");
-        //System.out.println(user1);
+        redisTemplate.opsForHash().put(1, "user", user);
 
-        //stringRedisTemplate.opsForValue().set("test-key", "测试");
-        String test = stringRedisTemplate.opsForValue().get("test-key");
+        User user1 = (User)redisTemplate.opsForHash().get(1, "user");
+        System.out.println(user1);
+
+        redisTemplate.opsForValue().set("test-key", "测试");
+        String test = (String)redisTemplate.opsForValue().get("test-key");
         System.out.println(test);
     }
 

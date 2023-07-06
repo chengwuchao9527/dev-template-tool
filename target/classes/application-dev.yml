@@ -1,8 +1,7 @@
 spring:
   redis:
-    host: redis-6271faf7-ed2e-4e4d-8f8d-bc2091089089.cn-east-3.yzsci.cn
+    host: 127.0.0.1
     port: 6379
-    password: o9k3e3BDcfwAofK9wokn
     jedis:
       pool:
         max-idle: 8
