@@ -1,6 +1,7 @@
 package com.cheng.controller;
 
-import com.cheng.domain.User;
+import com.cheng.dao.UserDAO;
+import com.cheng.domain.UserDO;
 import com.cheng.exception.BadRequestException;
 import com.cheng.exception.EntityExistException;
 import io.swagger.annotations.Api;
@@ -27,14 +28,17 @@ public class TestController {
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
 
+    @Autowired
+    private UserDAO userDAO;
+
     @GetMapping("/redis-serialize")
     public void testRedisSerialize(){
-        User user = new User();
+        UserDO user = new UserDO();
         user.setId(1L);
         user.setName("张三");
         redisTemplate.opsForHash().put(1, "user", user);
 
-        User user1 = (User)redisTemplate.opsForHash().get(1, "user");
+        UserDO user1 = (UserDO) redisTemplate.opsForHash().get(1, "user");
         System.out.println(user1);
 
         redisTemplate.opsForValue().set("test-key", "测试");
@@ -44,6 +48,17 @@ public class TestController {
 
     @GetMapping("/test-exception")
     public void testGlobalException(Integer test){
-        throw new EntityExistException(User.class, "id", "23");
+        throw new EntityExistException(UserDO.class, "id", "23");
+    }
+
+    @GetMapping("/test-mysql")
+    public void testMysql(){
+        for (int i = 1; i < 10000; i++) {
+            UserDO user = new UserDO();
+            user.setName("张" + i);
+            user.setAge(i);
+            user.initCreateParam(1L);
+            userDAO.save(user);
+        }
     }
 }
